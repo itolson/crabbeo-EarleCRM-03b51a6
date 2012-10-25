@@ -130,7 +130,7 @@ public class ClaimsDetailsGateway {
         this.causeCode = causeCode;
     }
 
-    public String getClaimCircumstance() {
+    public String getClaimCircumstance() { 
         return claimCircumstance;
     }
 
