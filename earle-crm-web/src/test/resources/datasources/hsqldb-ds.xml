@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+
+<jdbc-connection-pool
+	name="jdbc/unit-test-pool"
+	res-type="javax.sql.DataSource"
+	datasource-classname="org.hsqldb.jdbc.jdbcDataSource"
+	pool-resize-quantity="1" max-pool-size="10" steady-pool-size="0"
+	statement-timeout-in-seconds="60" >
+   <property name="database" value="jdbc:hsqldb:mem:unit-testing-jpa" />
+   <property name="user" value="sa" />
+   <property name="password" value="" />
+ </jdbc-connection-pool>
+
+ <jdbc-resource jndi-name="jdbc/EarleCRMDS" pool-name="jdbc/unit-test-pool" />
+
+</resources>

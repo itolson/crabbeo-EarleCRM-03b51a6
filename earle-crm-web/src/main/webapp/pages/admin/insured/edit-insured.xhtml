@@ -1,0 +1,37 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="insuredDetails" header="Insured Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tabheader">
+        <p:focus context="displayInsured"/>  
+        <h:panelGrid id="displayInsured" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+            <h:outputText value="Name: "  styleClass="dialog"/>
+            <p:inputText value="#{insuredGateway.selectedInsured.name}" />
+
+            <h:outputText value="Address Line 1: "  styleClass="dialog"/>
+            <p:inputText value="#{insuredGateway.selectedInsured.address1}"/>
+            <h:outputText value="Address Line 2: "  styleClass="dialog"/>
+            <p:inputText value="#{insuredGateway.selectedInsured.address2}"/>
+            <h:outputText value="Address Line 3: "  styleClass="dialog"/>
+            <p:inputText value="#{insuredGateway.selectedInsured.address3}"/>
+            <h:outputText value="Address Line 4: "  styleClass="dialog"/>
+            <p:inputText value="#{insuredGateway.selectedInsured.address4}"/>
+            <h:outputText value="Postcode: "  styleClass="dialog"/>
+            <p:inputText value="#{insuredGateway.selectedInsured.postcode}"/>
+            <h:outputText value="Telephone: "  styleClass="dialog"/>
+            <h:outputText value="Contact: "  styleClass="dialog"/>
+        </h:panelGrid>
+        <P></P>
+        <div>
+            <p:commandButton value="Save" action="#{insuredGateway.save}" onclick="insuredetails.hide()" ajax="false"/>              
+            <p:commandButton value="Delete" action="#{insuredGateway.delete}" onclick="insuredDetails.hide()" ajax="false"/>                          
+            <h:commandButton value="Close" style="float:right;  z-index: 1000;">
+                <f:ajax onevent="insuredDetails.hide()"></f:ajax>
+            </h:commandButton> 
+        </div>                                    
+    </p:dialog>
+
+</ui:composition>

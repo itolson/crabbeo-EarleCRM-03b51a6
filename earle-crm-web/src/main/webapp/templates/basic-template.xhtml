@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view>
+        <h:head>
+            <title>Claim Track</title>
+            <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/beale.css" />
+        </h:head>
+        <h:body>
+            <p:layout fullPage="true">               
+                <p:layoutUnit position="center">
+                    <p:fieldset legend="Claims Track" styleClass="tabheader1">
+                        <p:menubar model="#{buildMenu.model}"/>
+                        <p></p>
+                        <ui:insert name="content"/>
+                        <p:growl id="growl" showDetail="false" sticky="false"/>                        
+                    </p:fieldset>                            
+                </p:layoutUnit>
+            </p:layout>
+        </h:body>
+    </f:view>
+</html> 

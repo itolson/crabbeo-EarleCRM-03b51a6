@@ -1,0 +1,30 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:fieldset toggleable="false" legend="Profession Aministration" styleClass="tabheader" style="width:47%;font-size:12px;border:0px;background:0px"> 
+        <p:fieldset  legend="Add" toggleable="true" toggleSpeed="100" collapsed="true" style="font-size:12px;background:0px"> 
+        <p:focus context="professionSearch"/>  
+        <h:panelGrid id="professionSearch" columns="4" styleClass="width100" cellspacing="1" cellpadding="1">
+            <p:column>                            
+                <h:outputText value="Description: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>
+                <p:inputText id="description" label="Description" value="#{professionGateway.professionDescription}">
+                </p:inputText>                                    
+            </p:column>
+
+        </h:panelGrid>
+        <h:panelGroup>
+            <p:commandButton value="Save Details" action="#{professionGateway.add}" update=":profession">
+            </p:commandButton>
+                
+        </h:panelGroup>
+
+    </p:fieldset>
+    </p:fieldset>            
+
+</ui:composition>

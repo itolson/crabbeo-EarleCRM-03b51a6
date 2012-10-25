@@ -1,0 +1,28 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable value="#{diaryGateway.diarys}" var="diary" paginator="true" rows="15"
+                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" 
+                 selectionMode="single" selection="#{diaryGateway.selectedDiary}" id="diaryTable" lazy="false" rowKey="#{diary.id}" style="width: 100%">
+
+        <p:ajax event="rowSelect" update=":diary:diarySearch" oncomplete="diaryDetailsDialog.show()" />
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="Claim Ref" sortBy="#{diary.claimRef}" filterBy="#{diary.claimRef}" filterMatchMode="contains" styleClass="coldte11c"/>
+                <p:column headerText="Date / Time" sortBy="#{diary.startDate} #{diary.startTime}" filterBy="#{diary.startDate}" filterMatchMode="contains" styleClass="coldte11c"/>
+                <p:column headerText="End Date / Time" sortBy="#{diary.endDate}" filterBy="#{diary.endDate}" filterMatchMode="contains" styleClass="coldte11c"/>
+                <p:column headerText="Reminder" sortBy="#{diary.event}" filterBy="#{diary.event}" filterMatchMode="contains" styleClass="col11detailsl"/>                                        
+            </p:row>
+        </p:columnGroup>
+        <p:column styleClass="coldte11c">#{diary.claimRef}</p:column>        
+        <p:column styleClass="coldte11c">#{diary.startDate} #{diary.startTime}</p:column>
+        <p:column styleClass="col11c">#{diary.endDate} #{diary.endTime}</p:column>
+        <p:column styleClass="col11detailsl">#{diary.event}</p:column>
+    </p:dataTable>
+
+</ui:composition>

@@ -1,0 +1,45 @@
+<<<<<<< HEAD
+# used by PropertiesLoaderTest
+test.key = test
+# used by PropertiesSettingProducerTest
+test.ok.string = aString
+test.ok.boolean.true1 = true
+test.ok.boolean.true2 = Y
+test.ok.boolean.true3 = 1
+test.ok.boolean.false1 = false
+test.ok.boolean.false2 = N
+test.ok.boolean.false3 = 0
+test.ok.boolean.false4 = anything else
+test.ok.decimal.1 = 123.456
+test.ok.decimal.2 = 789
+test.ok.date = 31/12/2010
+test.ok.integer = 42
+test.ok.long = 1234567890
+
+test.bad.decimal.1 = not a decimal
+test.bad.date.1 = not a date
+test.bad.integer.1 = not an integer
+test.bad.long.1 = not a long
+=======
+# used by PropertiesLoaderTest
+test.key = test
+# used by PropertiesSettingProducerTest
+test.ok.string = aString
+test.ok.boolean.true1 = true
+test.ok.boolean.true2 = Y
+test.ok.boolean.true3 = 1
+test.ok.boolean.false1 = false
+test.ok.boolean.false2 = N
+test.ok.boolean.false3 = 0
+test.ok.boolean.false4 = anything else
+test.ok.decimal.1 = 123.456
+test.ok.decimal.2 = 789
+test.ok.date = 31/12/2010
+test.ok.integer = 42
+test.ok.long = 1234567890
+
+test.bad.decimal.1 = not a decimal
+test.bad.date.1 = not a date
+test.bad.integer.1 = not an integer
+test.bad.long.1 = not a long
+>>>>>>> c472f8a713f1f1e2f047e053354edfb0042912d1

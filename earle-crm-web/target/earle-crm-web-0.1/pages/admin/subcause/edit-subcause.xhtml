@@ -1,0 +1,23 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="subcauseDetails" header="Subcause Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tab14">
+        <p:focus context="displaySubcause"/>  
+        <h:panelGrid id="displaySubcause" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+            <h:outputText value="Subcause Description: " />
+            <h:inputText value="#{subcauseGateway.selectedSubcause.description}"/>
+        </h:panelGrid>
+
+        <h:panelGroup>
+            <p:commandButton value="Save" action="#{subcauseGateway.save}" onclick="subcauseDetails.hide()" ajax="false"/>              
+            <p:commandButton value="Delete" action="#{subcauseGateway.delete}" onclick="subcauseDetails.hide()" ajax="false"/>                    
+            <h:commandButton value="Close" style=" float:right;  z-index: 1000;">
+                <f:ajax onevent="subcauseDetails.hide()"></f:ajax>
+            </h:commandButton> 
+        </h:panelGroup>
+    </p:dialog>
+</ui:composition>

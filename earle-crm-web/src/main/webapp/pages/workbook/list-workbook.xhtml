@@ -1,0 +1,25 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable value="#{claimsworkbookGateway.claimsworkbooks}" var="claimsworkbook" paginator="true" rows="15"
+                 selectionMode="single" selection="#{claimsworkbookGateway.selectedClaimsworkbook}" id="claimsTable" lazy="false" rowKey="#{claimsworkbook.id}" style="width: 100%">
+
+        <p:ajax event="rowSelect" oncomplete="claimDetails.show()" update=":claim:claimDisplay"/>
+        
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="Claim Ref" sortBy="#{claimsworkbook.id}" filterBy="#{claimsworkbook.id}" filterMatchMode="contains" styleClass="col11l"/>
+                <p:column headerText="Last Update" sortBy="#{claimsworkbook.claimUpdate}" filterBy="#{claimsworkbook.claimUpdate}" filterMatchMode="contains" styleClass="col11detailsl"/>                                        
+                <p:column headerText="Date" sortBy="#{claimsworkbook.claimDate}" filterBy="#{claimsworkbook.claimDate}" filterMatchMode="contains" styleClass="coldte11c"/>
+            </p:row>
+        </p:columnGroup>
+        <p:column styleClass="col11l">#{claimsworkbook.claimNo}</p:column>
+        <p:column styleClass="col11detailsl">#{claimsworkbook.claimUpdate}</p:column>
+        <p:column styleClass="coldte11c">#{claimsworkbook.claimDate}</p:column>
+    </p:dataTable>  
+</ui:composition>

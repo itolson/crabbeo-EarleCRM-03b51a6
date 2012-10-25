@@ -1,0 +1,31 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="claimDetails" header="Claim Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tab14">
+            <p:focus context="claimDisplay"/>  
+            <h:panelGrid id="claimDisplay" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+
+                <h:outputText value="Claim Ref: " styleClass="dialog"/>
+                <h:inputText value="#{claimsworkbookGateway.selectedClaimsworkbook.claimNo}" />
+
+                <h:outputText value="Last Update: " styleClass="dialog"/>
+                <p:inputTextarea value="#{claimsworkbookGateway.selectedClaimsworkbook.claimUpdate}" rows="3" cols="33" required="true"/>
+
+                <h:outputText value="Date: " styleClass="dialog"/>
+                <h:inputText value="#{claimsworkbookGateway.selectedClaimsworkbook.claimDate}" />
+
+            </h:panelGrid>
+            <P></P>
+            <div>
+                <h:commandButton value="View Full Details" action="#{claimsworkbookGateway.save}" label="messagesave"/>
+                <h:commandButton value="Close" style="float:right;  z-index: 1000;">
+                    <f:ajax onevent="claimDetails.hide()"></f:ajax>
+                </h:commandButton> 
+            </div>
+    </p:dialog>
+
+</ui:composition>

@@ -1,0 +1,37 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="userDetails" header="User Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tabheader">
+        <p:focus context="displayUser"/>  
+        <h:panelGrid id="displayUser" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+
+            <h:outputText value="User ID: "  styleClass="dialog"/>
+            <p:inputText value="#{userGateway.selectedUser.userName}" />
+
+            <h:outputText value="First Name: "  styleClass="dialog"/>
+            <p:inputText value="#{userGateway.selectedUser.forename}" />
+
+            <h:outputText value="Surname: "  styleClass="dialog"/>
+            <p:inputText value="#{userGateway.selectedUser.surname}"/>
+
+            <h:outputText value="Hourly Rate: "  styleClass="dialog"/>
+            <p:inputText value="#{userGateway.selectedUser.hourlyrate}" />
+
+            <h:outputText value="Partner: "  styleClass="dialog"/>
+            <p:inputText value="#{userGateway.selectedUser.partner}" />            
+        </h:panelGrid>
+        <P></P>
+        <div>
+            <p:commandButton value="Save" action="#{userGateway.save}" onclick="userDetails.hide()" ajax="false"/>              
+            <p:commandButton value="Delete" action="#{userGateway.delete}" onclick="userDetails.hide()" ajax="false"/>                        
+            <h:commandButton value="Close" style="float:right;  z-index: 1000;">
+                <f:ajax onevent="userDetails.hide()"></f:ajax>
+            </h:commandButton> 
+        </div>                                    
+    </p:dialog>
+
+</ui:composition>

@@ -1,0 +1,103 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:tab id="tab2" title="Setup Claim Page 2" titletip="Enter Claim Details Screen 2">
+        <h:panelGrid columns="6" styleClass="width100" cellspacing="2" cellpadding="2">
+            <p:column>                          
+                <h:outputText value="Initial Case Estimate: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputMask value="#{maskController.ssn}" mask="£9999999999" styleClass="inpleft"/>                        
+            </p:column>
+            <p:column>  
+                <h:outputText value="Case Estimate Indemnity: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputMask value="#{maskController.ssn}" mask="£9999999999" styleClass="inpleft"/>                         
+            </p:column>
+            <p:column>  
+                <h:outputText value="Indemnity Payments: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputMask value="#{maskController.ssn}" mask="£9999999999" styleClass="inpleft"/>                                                 
+            </p:column>
+            <p:column>  
+                <h:outputText value="Claimant Costs Estimate: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputMask value="#{maskController.ssn}" mask="£9999999999" styleClass="inpleft"/>                                                                         
+            </p:column>
+            <p:column>  
+                <h:outputText value="Claimant Costs Paid: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputMask value="#{maskController.ssn}" mask="£9999999999" styleClass="inpleft"/>                                                                                                 
+            </p:column>
+            <p:column>  
+                <h:outputText value="Total Incurred: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputMask value="#{maskController.ssn}" mask="£9999999999" styleClass="inpleft"/>                                                                                                 
+            </p:column>
+            <p:column>  
+                <h:outputText value="MPL: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputMask value="#{maskController.ssn}" mask="£9999999999" styleClass="inpleft"/> 
+            </p:column>
+            <p:column>  
+                <h:outputText value="Claim/Circumstance: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:inputText id="ClaimCircumstance"/>  
+            </p:column>
+            <p:column>  
+                <h:outputText value="Date Settled: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{calendarBean.date1}" navigator="true" id="DateSettled" showButtonPanel="true" pattern="dd/MM/yyyy" styleClass="inpleft"/>   
+            </p:column>
+            <p:column>  
+                <h:outputText value="PAP Letter of Claim Served: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:selectBooleanButton id="PAPletterofclaim" value="yes" onLabel="Yes" offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close"/>                       
+            </p:column>
+            <p:column>  
+                <h:outputText value="PAP Response Due: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{calendarBean.date1}"  navigator="true" id="PAPResponseDue" showButtonPanel="true" pattern="dd/MM/yyyy" styleClass="inpleft"/>   
+            </p:column>
+            <p:column>  
+                <h:outputText value="PAP Response Sent: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{calendarBean.date1}"  navigator="true" id="PAPResponseSent" showButtonPanel="true" pattern="dd/MM/yyyy"  styleClass="inpleft"/>  
+            </p:column>
+            <p:column>  
+                <h:outputText value="Fraud: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:selectBooleanButton id="Fraud" value="yes" onLabel="Yes" offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close"/>                                               
+            </p:column>
+            <p:column>  
+                <h:outputText value="File Open Date: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{calendarBean.date1}"  navigator="true" id="FileOpenDate" showButtonPanel="true" pattern="dd/MM/yyyy" styleClass="inpleft"/>  
+            </p:column>
+            <p:column>  
+                <h:outputText value="File Closed Date: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{calendarBean.date1}"  navigator="true" id="FileClosedDate" showButtonPanel="true" pattern="dd/MM/yyyy" styleClass="inpleft"/>  
+            </p:column>
+        </h:panelGrid>
+    </p:tab>
+
+</ui:composition>

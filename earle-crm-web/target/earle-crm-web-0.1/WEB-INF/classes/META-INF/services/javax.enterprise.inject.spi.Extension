@@ -1,0 +1,2 @@
+org.jboss.weld.manager.SessionScopeForFitnesse
+org.jboss.weld.manager.ConversationScopeForFitnesse

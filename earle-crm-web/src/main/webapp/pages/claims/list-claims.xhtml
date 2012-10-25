@@ -1,0 +1,35 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable value="#{claimsPopulate.rows}" var="row" paginator="true" rows="12" 
+                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                 selectionMode="single" selection="#{claimsPopulate.selectedRow}" id="messageTable" lazy="false" rowKey="#{row.columns}">
+
+        <p:ajax event="rowSelect" oncomplete="claimDetails.show()" update=":claims:claimDisplay"/>
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="Beale Ref" sortBy="#{row.columns[0]}" filterBy="#{row.columns[0]}" filterMatchMode="contains" styleClass="col11l"/>
+                <p:column headerText="Broker" sortBy="#{row.columns[1]}" filterBy="#{row.columns[1]}" filterMatchMode="contains" styleClass="col11detailss"/>
+                <p:column headerText="Broker Ref" sortBy="#{row.columns[2]}" filterBy="#{row.columns[2]}" filterMatchMode="contains" styleClass="col11l"/>                                        
+                <p:column headerText="Profession" sortBy="#{row.columns[3]}" filterBy="#{row.columns[3]}" filterMatchMode="contains" styleClass="col11detailss"/>
+                <p:column headerText="Date Rc Insurer" sortBy="#{row.columns[4]}" filterBy="#{row.columns[4]}" filterMatchMode="contains" styleClass="coldte11"/>
+                <p:column headerText="Incurred / MPL" sortBy="#{row.columns[5]}" filterBy="#{row.columns[5]}" filterMatchMode="contains" styleClass="col11l"/>
+                <p:column headerText="Details of Loss" sortBy="#{row.columns[6]}" filterBy="#{row.columns[6]}" filterMatchMode="contains" styleClass="col11detailss"/>
+                <p:column headerText="Current Position" sortBy="#{row.columns[7]}" filterBy="#{row.columns[7]}" filterMatchMode="contains" styleClass="col11detailss"/>
+            </p:row>
+        </p:columnGroup>
+        <p:column styleClass="col11l">#{row.columns[0]}</p:column>
+        <p:column styleClass="col11detailss">#{row.columns[1]}</p:column>
+        <p:column styleClass="col11l">#{row.columns[2]}</p:column>
+        <p:column styleClass="col11detailss">#{row.columns[3]}</p:column>
+        <p:column styleClass="coldte11">#{row.columns[4]}</p:column> 
+        <p:column styleClass="col11l">#{row.columns[5]}</p:column>
+        <p:column styleClass="col11detailss">#{row.columns[6]}</p:column>
+        <p:column styleClass="col11detailss">#{row.columns[7]}</p:column>
+    </p:dataTable>
+</ui:composition>

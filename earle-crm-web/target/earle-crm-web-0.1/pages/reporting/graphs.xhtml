@@ -1,0 +1,22 @@
+<ui:composition template="/templates/basic-template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"  
+                xmlns:h="http://java.sun.com/jsf/html"  
+                xmlns:f="http://java.sun.com/jsf/core"  
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets">  
+    <ui:define name="content">
+        <h:form>
+            <p:fieldset legend="MI - Graphs" styleClass="tabheader">
+                <h:panelGrid columns="4" styleClass="butcenter">
+                    <p:lineChart id="linear" value="#{chartBean.linearModel}" legendPosition="e" title="Linear Chart" minY="0" maxY="10" style="height:300px"/>
+
+                    <p:lineChart id="category" value="#{chartBean.categoryModel}" legendPosition="e" title="Category Chart" minY="0" maxY="200" style="height:300px;margin-top:20px"/>
+                </h:panelGrid>                        
+                <h:panelGrid columns="4" styleClass="butcenter"> 
+                    <p:pieChart id="custom" value="#{chartBean.pieModel}" legendPosition="e" fill="false" showDataLabels="true"  title="Year 1 Breakdown" style="width:400px;height:300px" sliceMargin="3" diameter="200" />
+                    <p:pieChart id="EngineersClaims" value="#{chartBean.pieModel}" legendPosition="w" title="Year 2 Breakdown" style="width:400px;height:300px" showDataLabels="true" />
+                </h:panelGrid>
+            </p:fieldset>
+        </h:form>
+    </ui:define>  
+</ui:composition>			

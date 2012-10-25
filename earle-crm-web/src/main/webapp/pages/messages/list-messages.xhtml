@@ -1,0 +1,28 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable value="#{messageGateway.messages}" var="messages" paginator="true" rows="15"
+                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" 
+                 selectionMode="single" selection="#{messageGateway.selectedMessage}" id="messageTable" lazy="false" rowKey="#{messages.id}" style="width: 100%">
+
+        <p:ajax event="rowSelect" oncomplete="messageDetails.show()" update=":message:displayMessage"/>
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="Date Sent" sortBy="#{messages.dateSent}" filterBy="#{messages.dateSent}"  filterMatchMode="contains" styleClass="coldte11c"/>
+                <p:column headerText="From User" sortBy="#{messages.idFrom}" filterBy="#{messages.idFrom}"  filterMatchMode="contains" styleClass="col11l"/>
+                <p:column headerText="Message" sortBy="#{messages.message}" filterBy="#{messages.message}"  filterMatchMode="contains" styleClass="col11detailsl"/>
+                <p:column headerText="Date Read" sortBy="#{messages.dateRead}" filterBy="#{messages.dateRead}"  filterMatchMode="contains" styleClass="coldte11c"/>                
+            </p:row>
+        </p:columnGroup>
+        <p:column styleClass="coldte11cb">#{messages.dateSent}</p:column>
+        <p:column styleClass="col11lb">#{messages.idFrom}</p:column>
+        <p:column styleClass="col11detailslb">#{messages.message}</p:column>
+        <p:column styleClass="coldte11cb">#{messages.dateRead}</p:column>        
+    </p:dataTable>
+
+</ui:composition>

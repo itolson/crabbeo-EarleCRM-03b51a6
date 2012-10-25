@@ -1,0 +1,24 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:tab id="tab3" title="Setup Claim Page 3" titletip="Enter Claim Details Screen 3">
+        <h:panelGrid columns="4" styleClass="width100" cellpadding="4">
+            <p:column>
+                <h:outputText value="Details of Loss: " styleClass="descleft"/>
+            </p:column>
+            <p:column>
+                <p:inputTextarea rows="10" cols="90" autoResize="true" styleClass="descleft"/>
+            </p:column>                                                    
+            <p:column>
+                <h:outputText value="Reason for Removal from DA: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>
+                <p:inputTextarea rows="10" cols="50" id="ResonforremovalfromDA" autoResize="true" styleClass="descleft"/>                
+            </p:column>                        
+        </h:panelGrid>
+    </p:tab>
+</ui:composition>

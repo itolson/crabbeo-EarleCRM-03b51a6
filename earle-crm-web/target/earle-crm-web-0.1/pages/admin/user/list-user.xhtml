@@ -1,0 +1,31 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+
+    <p:dataTable value="#{userGateway.users}" var="userDetails" paginator="true" rows="15" 
+                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                 selectionMode="single" selection="#{userGateway.selectedUser}" id="userTable" lazy="false" rowKey="#{userDetails.id}" style="width: 99%">
+
+        <p:ajax event="rowSelect" oncomplete="userDetails.show()" update=":user:displayUser"/>
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="User Id" sortBy="#{userDetails.userName}" filterBy="#{userDetails.userName}" filterMatchMode="contains" styleClass="col11l"/>                
+                <p:column headerText="First Name" sortBy="#{userDetails.forename}" filterBy="#{userDetails.forename}" filterMatchMode="contains" styleClass="col11l"/>
+                <p:column headerText="Surname" sortBy="#{userDetails.surname}" filterBy="#{userDetails.surname}" filterMatchMode="contains" styleClass="col11l"/>
+                <p:column headerText="Hourly Rate" sortBy="#{userDetails.hourlyrate}" filterBy="#{userDetails.hourlyrate}" filterMatchMode="contains" styleClass="col11l"/>
+                <p:column headerText="Partner" sortBy="#{userDetails.partner}" filterBy="#{userDetails.partner}" filterMatchMode="contains" styleClass="col11l"/>                
+            </p:row>
+        </p:columnGroup>
+        <p:column styleClass="col11l">#{userDetails.userName}</p:column>
+        <p:column styleClass="col11l">#{userDetails.forename}</p:column>
+        <p:column styleClass="col11l">#{userDetails.surname}</p:column>
+        <p:column styleClass="col11l">#{userDetails.hourlyrate}</p:column>
+        <p:column styleClass="col11l">#{userDetails.partner}</p:column>        
+    </p:dataTable>
+
+</ui:composition>

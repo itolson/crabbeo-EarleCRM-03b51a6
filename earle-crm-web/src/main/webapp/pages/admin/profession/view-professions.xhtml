@@ -1,0 +1,16 @@
+<ui:composition template="/templates/basic-template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"  
+                xmlns:h="http://java.sun.com/jsf/html"  
+                xmlns:f="http://java.sun.com/jsf/core"  
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+    <ui:define name="content">
+        <h:form id="profession">  
+            <ui:include src="add-profession.xhtml"/>
+            <ui:include src="list-professions.xhtml"/>
+            <ui:include src="edit-profession.xhtml"/>
+
+        </h:form>
+    </ui:define>  
+</ui:composition>

@@ -1,0 +1,58 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:fieldset toggleable="false" legend="User Administration" styleClass="tabheader" style="font-size:12px;border:0px;background:0px"> 
+        <p:fieldset  legend="Add" toggleable="true" id="useradd" toggleSpeed="100" collapsed="true" style="font-size:12px;background:0px"> 
+            <h:panelGrid columns="6" styleClass="width100" cellspacing="2" cellpadding="2">
+                <p:column>
+                    <h:outputText id="useridtext" value="User ID:" styleClass="descleft"/>
+                </p:column>
+                <p:column>
+                    <p:inputText id="username" label="User Name" value="#{userGateway.userName}" requiredMessage="A User ID Is Required">
+
+                    </p:inputText>
+                </p:column>
+
+                <p:column>
+                    <h:outputText value="Forename:" styleClass="descleft"/>
+                </p:column>
+                <p:column>
+                    <p:inputText id="forename" label="First Name" value="#{userGateway.forename}" requiredMessage="A Forename Is Required">
+
+                    </p:inputText>
+                </p:column>
+                <p:column>                            
+                    <h:outputText value="Surname: "  styleClass="descleft"/>
+                </p:column>
+                <p:column>                            
+                    <p:inputText id="surame" label="Surname" value="#{userGateway.surname}" requiredMessage="A Surname Is Required">
+
+                    </p:inputText>                                    
+                </p:column>
+
+                <p:column>                            
+                    <h:outputText value="Hourly Rate: "  styleClass="descleft"/>
+                </p:column>
+                <p:column>                            
+                    <p:inputText id="hourlyRate" label="Hourly Rate" value="#{userGateway.hourlyrate}" requiredMessage="A Hourly Rate Is Required">
+
+                    </p:inputText>                                    
+                </p:column>
+                <p:column>  
+                    <h:outputText value="Partner: "  styleClass="descleft"/>
+                </p:column>
+                <p:column>  
+                    <p:selectBooleanButton id="partner" value="#{userGateway.partner}" onLabel="Yes" offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close"/>                                               
+                </p:column>
+            </h:panelGrid>
+            <P></P>
+            <div>
+                <p:commandButton value="Save Details" action="#{userGateway.add}" ajax="false"/>  
+            </div>
+        </p:fieldset>
+    </p:fieldset>                    
+</ui:composition>

@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+org.jboss.weld.manager.SessionScopeForFitnesse
+org.jboss.weld.manager.ConversationScopeForFitnesse
+=======
+org.jboss.weld.manager.SessionScopeForFitnesse
+org.jboss.weld.manager.ConversationScopeForFitnesse
+>>>>>>> c472f8a713f1f1e2f047e053354edfb0042912d1

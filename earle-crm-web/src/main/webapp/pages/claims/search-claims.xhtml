@@ -1,0 +1,30 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:focus context="claimsearch"/>
+    <h:panelGrid id="claimsearch" columns="5" styleClass="width100" columnClasses="className">
+        <h:outputText value="Search :"  styleClass="descleft"/>
+        <p:inputText id="claimsearchtext" required="true" label="Search Text" style="width:120px">
+            <f:validateLength minimum="3"/>
+        </p:inputText>
+        <h:commandButton value="Search" action="/pages/claims/dispData.xhtml" label="searchClaim" style="align:right"/>
+        <h:outputText value="By: " styleClass="descleft"/>
+        <p:selectOneMenu id="claimsearchtype" value="Search By" effect="fade" style="width:200px">
+            <f:selectItem itemLabel="by Insured Type" itemValue="" />
+            <f:selectItem itemLabel="by Claim No" itemValue="1" />
+            <f:selectItem itemLabel="by Claiment" itemValue="2" />
+            <f:selectItem itemLabel="by Broker Ref" itemValue="3" />
+            <f:selectItem itemLabel="by Loss Location" itemValue="4" />
+            <f:selectItem itemLabel="by Area of Practice" itemValue="5" />
+            <f:selectItem itemLabel="by Claim Supervisor" itemValue="6" />
+            <f:selectItem itemLabel="by Claim Handler" itemValue="7" />
+            <f:selectItem itemLabel="by Panel Firm" itemValue="8" />
+            <f:selectItem itemLabel="by Panel Instructions" itemValue="9" />
+            <f:selectItem itemLabel="All Panel Instructions" itemValue="10" />                                
+        </p:selectOneMenu>
+    </h:panelGrid>
+</ui:composition>

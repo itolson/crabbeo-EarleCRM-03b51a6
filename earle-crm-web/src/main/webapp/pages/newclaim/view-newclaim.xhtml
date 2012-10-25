@@ -1,0 +1,21 @@
+<ui:composition template="/templates/basic-template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"  
+                xmlns:h="http://java.sun.com/jsf/html"  
+                xmlns:f="http://java.sun.com/jsf/core"  
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+    <ui:define name="content">
+        <h:form id="newclaim">
+            <p:fieldset legend="Claims Track Enter New Claim Details" styleClass="tabheader1">
+                <p:tabView id="tabView" styleClass="tabheader">
+                <!--<p:menubar model="#{buildMenu.model}"/>-->
+
+                    <ui:include src="tab1-newclaim.xhtml"/>
+                    <ui:include src="tab2-newclaim.xhtml"/>
+                    <ui:include src="tab3-newclaim.xhtml"/>
+                </p:tabView>
+            </p:fieldset>
+        </h:form>
+    </ui:define>  
+</ui:composition>

@@ -1,0 +1,49 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="diaryDetailsDialog" header="Diary Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tabheader">
+        <p:focus context="diarySearch"/>  
+        <h:panelGrid id="diarySearch" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+
+            <h:outputText value="Start Date: "  styleClass="dialog"/>
+            <h:inputText value="#{diaryGateway.selectedDiary.startDate}">
+                <f:convertDateTime type="date" pattern="dd-MM-yyyy"/>                     
+            </h:inputText>
+            <h:outputText value="Start Time: "  styleClass="dialog"/>
+            <h:inputText value="#{diaryGateway.selectedDiary.startTime}" />
+
+            <h:outputText value="End Date: "  styleClass="dialog"/>
+            <h:inputText value="#{diaryGateway.selectedDiary.endDate}">
+                <f:convertDateTime type="date" pattern="dd-MM-yyyy"/>                     
+            </h:inputText>
+
+            <h:outputText value="End Time: "  styleClass="dialog"/>
+            <h:inputText value="#{diaryGateway.selectedDiary.endTime}" />
+
+            <h:outputText value="Claim Ref: "  styleClass="dialog"/>
+            <h:inputText value="#{diaryGateway.selectedDiary.claimRef}" />
+
+            <h:outputText value="Reminder: "  styleClass="dialog"/>
+            <p:inputTextarea value="#{diaryGateway.selectedDiary.event}" rows="3" cols="33" required="true"/>
+
+        </h:panelGrid>
+        <P></P>
+        <div>
+            <p:commandButton value="Amend" actionListener="#{diaryGateway.save}" label="messagesave">
+                <p:ajax update=":diary:diaryTable" />
+                <f:ajax onevent="diaryDetailsDialog.hide()"></f:ajax>
+            </p:commandButton>                     
+            <h:commandButton value="Delete" action="#{diaryGateway.delete}" label="messagesave"> 
+                <f:ajax onevent="diaryDetailsDialog.hide()"></f:ajax>
+            </h:commandButton> 
+            <h:commandButton value="Close" style="float:right;  z-index: 1000;">
+                <f:ajax onevent="diaryDetailsDialog.hide()"></f:ajax>
+            </h:commandButton> 
+        </div>                                    
+    </p:dialog>
+
+</ui:composition>

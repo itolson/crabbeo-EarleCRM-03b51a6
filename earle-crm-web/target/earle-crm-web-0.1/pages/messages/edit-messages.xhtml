@@ -1,0 +1,36 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="messageDetails" header="Message Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tabheader">
+        <p:focus context="displayMessage"/>  
+        <h:panelGrid id="displayMessage" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+
+            <h:outputText value="Date: "  styleClass="dialog"/>
+            <h:inputText value="#{messageGateway.selectedMessage.dateSent}" />
+
+            <h:outputText value="Users Name: "  styleClass="dialog"/>
+            <h:inputText value="#{messageGateway.selectedMessage.idFrom}" />
+
+            <h:outputText value="Message: "  styleClass="dialog"/>
+            <p:inputTextarea value="#{messageGateway.selectedMessage.message}" rows="3" cols="33" required="true"/>
+
+        </h:panelGrid>
+        <P></P>
+        <div>
+            <h:commandButton value="Mark Read" action="#{messageGateway.read}" label="messagesave">
+                <f:ajax onevent="messageDetails.hide()"></f:ajax>
+            </h:commandButton>                                         
+            <h:commandButton value="Delete" action="#{messageGateway.delete}" label="messagedelete">  
+                <f:ajax onevent="messageDetails.hide()"></f:ajax>
+            </h:commandButton>                        
+            <h:commandButton value="Close" style=" float:right;  z-index: 1000;">
+                <f:ajax onevent="messageDetails.hide()"></f:ajax>
+            </h:commandButton> 
+        </div>
+    </p:dialog>
+
+</ui:composition>

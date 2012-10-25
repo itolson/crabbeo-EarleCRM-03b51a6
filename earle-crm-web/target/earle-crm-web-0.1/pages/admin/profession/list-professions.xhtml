@@ -1,0 +1,22 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable value="#{professionGateway.professions}" var="profession" paginator="true" rows="15" 
+                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                 selectionMode="single" selection="#{professionGateway.selectedProfession}" id="professionTable" lazy="false" rowKey="#{profession.id}" style="align:center; width: 100%">
+        <p:ajax event="rowSelect" update=":profession:displayProfession" oncomplete="professionDetails.show()"/>  
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="Description" sortBy="#{profession.description}" filterBy="#{profession.description}" filterMatchMode="contains" styleClass="col11l"/>
+            </p:row>
+
+        </p:columnGroup>
+
+        <p:column styleClass="col11detailss">#{profession.description}</p:column>  
+
+    </p:dataTable>
+</ui:composition>

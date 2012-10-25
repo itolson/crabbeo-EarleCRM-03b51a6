@@ -1,0 +1,29 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable value="#{insuredGateway.insureds}" var="insuredDetails" paginator="true" rows="15" 
+                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                 selectionMode="single" selection="#{insuredGateway.selectedInsured}" id="insuredTable" lazy="false" rowKey="#{insuredDetails.id}" style="width: 100%">
+
+        <p:ajax event="rowSelect" oncomplete="insuredDetails.show()" update=":insured:displayInsured"/>
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="Name" sortBy="#{insuredDetails.name}" filterBy="#{insuredDetails.name}" filterMatchMode="contains" styleClass="col11detailss"/>
+                <p:column headerText="Address" sortBy="#{insuredDetails.address1}" filterBy="#{insuredDetails.address1}" filterMatchMode="contains" styleClass="col11detailsl"/>
+                <p:column headerText="Telephone" sortBy="" filterBy="" filterMatchMode="contains" styleClass="coll1l"/>                                        
+                <p:column headerText="Contact" sortBy="" filterBy="" filterMatchMode="contains" styleClass="coll11"/>
+            </p:row>
+        </p:columnGroup>
+        <p:column styleClass="col11l">#{insuredDetails.name}</p:column>
+        <p:column styleClass="col11detailsl">#{insuredDetails.address1}</p:column>
+        <p:column styleClass="col11l"></p:column>
+        <p:column styleClass="col11l"></p:column>
+
+    </p:dataTable>
+
+</ui:composition>

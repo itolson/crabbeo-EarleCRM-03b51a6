@@ -1,0 +1,29 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:fieldset toggleable="false" legend="Practice Aministration" styleClass="tabheader" style="width:97%;font-size:12px;border:0px;background:0px"> 
+    <p:fieldset  legend="Add" toggleable="true" toggleSpeed="100" collapsed="true" style="font-size:12px;background:0px"> 
+        <p:focus context="practiceSearch"/>  
+        <h:panelGrid id="practiceSearch" columns="1" styleClass="width100" cellspacing="1" cellpadding="1">
+            <p:column>                            
+                <h:outputText value="Description: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputText label="Description" value="#{practiceGateway.practiceDescription}">
+                </p:inputText>                                    
+            </p:column>
+
+        </h:panelGrid>
+
+        <h:panelGroup>
+            <p:commandButton value="Save Details" action="#{practiceGateway.add}" label="practicesave" ajax="false"/>             
+        </h:panelGroup>
+
+    </p:fieldset>
+    </p:fieldset>            
+
+</ui:composition>

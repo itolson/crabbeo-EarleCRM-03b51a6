@@ -1,0 +1,67 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+        <p:fieldset toggleable="false" legend="Diary Page" style="font-size:12px;border:0px;background:0px"> 
+    <p:fieldset legend="New" toggleable="true" toggleSpeed="100" collapsed="true" id="diary"  style="font-size:12px;background:0px">
+        <p:focus context="diaryDetails"/>
+        <h:panelGrid id="diaryDetails" columns="8" styleClass="width100" cellspacing="2" cellpadding="2">
+            <p:column>                        
+                <h:outputLabel value="Diary Entry :"  styleClass="descleft"/>
+            </p:column>
+            <p:column>
+                <p:inputTextarea rows="3" cols="33" id="diaryEvent" value="#{diary.event}" label="Diary Entry" required="true">
+                    <f:validateLength minimum="10"/>
+                </p:inputTextarea>                                             
+            </p:column>
+            <p:column>                        
+                <h:outputLabel value="Start Date :"   styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{diaryGateway.startDate}" navigator="true" id="DiaryStart" label="Diary Start Date" title="Enter Start Date" showButtonPanel="true" pattern="dd-MM-yyyy" styleClass="inpleft" required="true">  
+                    <f:convertDateTime type="date" pattern="dd-MM-yyyy"/>
+                    <f:validateLength minimum="1"/>
+                </p:calendar>
+            </p:column>
+            <p:column>                        
+                <h:outputLabel value="End Date :"  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{diaryGateway.endDate}" navigator="true" id="DiaryEnd" label="Diary End Date" showButtonPanel="true" pattern="dd-MM-yyyy"  styleClass="inpleft" required="true">  
+                    <f:validateLength minimum="1"/>
+                    <f:convertDateTime type="date" pattern="dd-MM-yyyy"/>                    
+                </p:calendar>                                            
+            </p:column>
+            <p:column>                        
+                <h:outputLabel value="Start Time :"  styleClass="descleft"/>
+            </p:column>
+            <p:column>
+                <p:calendar value="#{diaryGateway.startTime}" id="TimeStart" label="Diary Start Time" pattern="HH:mm a" timeOnly="true" required="true">
+                    <f:validateLength minimum="1"/>
+                </p:calendar>                                            
+            </p:column>
+            <p:column>                        
+                <h:outputLabel value="End Time :"  styleClass="descleft"/>
+            </p:column>
+            <p:column>  
+                <p:calendar value="#{diaryGateway.endTime}" id="TimeEnd" label="Diary Start Time" pattern="HH:mm a" timeOnly="true" required="true">
+                    <f:validateLength minimum="1"/>
+                </p:calendar>                                            
+            </p:column>
+        </h:panelGrid>
+
+        <P></P>
+        <div>
+            <h:commandButton value="Save Event" action="#{diaryGateway.save}" label="BealRef" styleClass="right">
+                    <f:ajax onevent="diaryDetails.hide()"></f:ajax>
+                </h:commandButton>                 
+            <h:commandButton value="Delete" action="#{diaryGateway.delete}" label="BealRef" styleClass="right">
+                    <f:ajax onevent="diaryDetails.hide()"></f:ajax>
+                </h:commandButton>                                 
+        </div>
+    </p:fieldset>
+    </p:fieldset>            
+</ui:composition>

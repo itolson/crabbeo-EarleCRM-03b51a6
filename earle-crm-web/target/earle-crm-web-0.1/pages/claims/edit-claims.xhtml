@@ -1,0 +1,51 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="claimDetails" header="Claim Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tabheader">
+            <p:focus context="claimDisplay"/>  
+            <h:panelGrid id="claimDisplay" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+
+                <h:outputText value="Beale Ref: "  styleClass="dialog"/>
+                <p:inputText value="#{row.columns[0]}" />
+
+                <h:outputText value="Broker: "  styleClass="dialog"/>
+                <p:inputTextarea value="#{row.columns[1]}" rows="3" cols="33" required="true"/>
+
+                <h:outputText value="Broker Ref: "  styleClass="dialog"/>
+                <p:inputText value="#{row.columns[2]}" />
+
+                <h:outputText value="Profession: "  styleClass="dialog"/>
+                <p:inputText value="#{row.columns[3]}" />
+
+                <h:outputText value="Date Rc Insurer: "  styleClass="dialog"/>
+                <p:inputText value="#{row.columns[4]}" />
+
+                <h:outputText value="Incurred / MPL: "  styleClass="dialog"/>
+                <p:inputText value="#{row.columns[5]}" />
+
+                <h:outputText value="Details of Loss: "  styleClass="dialog"/>
+                <p:inputTextarea value="#{row.columns[6]}" rows="3" cols="33" required="true"/>                                  
+
+                <h:outputText value="Current Position: "  styleClass="dialog"/>
+                <p:inputTextarea value="#{row.columns[7]}" rows="3" cols="33" required="true"/>                              
+
+            </h:panelGrid>
+            <P></P>
+            <div>
+                <h:commandButton value="Amend" action="#{claimGateway.save}" label="claimsave">
+                    <f:ajax onevent="claimDetails.hide()"></f:ajax>
+                </h:commandButton>
+                <h:commandButton value="View Full Details" action="#{claimGateway.view}" label="claimsave">                                    
+                    <f:ajax onevent="claimDetails.hide()"></f:ajax>
+                </h:commandButton>                    
+                <h:commandButton value="Close" style="float:right;  z-index: 1000;">
+                    <f:ajax onevent="claimDetails.hide()"></f:ajax>
+                </h:commandButton> 
+            </div>                                    
+    </p:dialog>
+
+</ui:composition>

@@ -1,0 +1,23 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:fieldset toggleable="false" legend="Subcause Aministration" styleClass="tabheader" style="width:97%;font-size:12px;border:0px;background:0px"> 
+        <p:fieldset  legend="Add" toggleable="true" toggleSpeed="100" collapsed="true" style="font-size:12px;background:0px"> 
+            <p:focus context="panel"/>
+            <p:panel id="panel" header="Details">
+                <h:outputText value="Description: "  styleClass="descleft"/>
+                <p:inputText label="Description" value="#{subcauseGateway.subcauseDescription}">
+
+                </p:inputText>                                    
+                <h:panelGroup>
+                <p:commandButton value="Save Details" action="#{subcauseGateway.add}" ajax="false"/>  
+                </h:panelGroup>
+            </p:panel>
+        </p:fieldset>
+    </p:fieldset>            
+
+</ui:composition>

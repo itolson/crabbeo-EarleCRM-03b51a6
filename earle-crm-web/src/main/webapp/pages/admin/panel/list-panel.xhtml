@@ -1,0 +1,25 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable value="#{panelGateway.panels}" var="panelDetails" paginator="true" rows="15"
+                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                 selectionMode="single" selection="#{panelGateway.selectedPanel}" id="professionTable" lazy="false" rowKey="#{panelDetails.id}" style="width:100%">
+
+        <p:ajax event="rowSelect" oncomplete="panelDetails.show()" update=":panel:displayPanel" />
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column headerText="Name" sortBy="#{panelDetails.name}" filterBy="#{panelDetails.name}" filterMatchMode="contains" styleClass="col11detailss"/>
+                <p:column headerText="Address" sortBy="#{panelDetails.address1}" filterBy="#{panelDetails.address1}" filterMatchMode="contains" styleClass="col11detailss"/>
+                <p:column headerText="Contact" sortBy="#{panelDetails.contacts}" filterBy="#{panelDetails.contacts}" filterMatchMode="contains" styleClass="col11c"/>                                        
+            </p:row>
+        </p:columnGroup>
+        <p:column styleClass="col11detailss">#{panelDetails.name}</p:column>
+        <p:column styleClass="col11detailss">#{panelDetails.address1}</p:column>
+        <p:column styleClass="col11c">#{panelDetails.contacts}</p:column>
+    </p:dataTable>
+</ui:composition>

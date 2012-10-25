@@ -1,0 +1,41 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:fieldset toggleable="false" legend="Message Page" styleClass="tabheader" style="font-size:12px;border:0px;background:0px"> 
+        <p:fieldset legend="New " toggleable="true" toggleSpeed="100" collapsed="true" style="font-size:12px;background:0px"> 
+            <p:focus context="panelmessage"/>
+            <h:panelGrid id="panelmessage" columns="4" styleClass="width100" cellspacing="2" cellpadding="2">
+                <p:column>                        
+                    <h:outputLabel value="Send To :"  styleClass="descleft"/>
+                </p:column>
+                <p:column>
+                    <p:selectOneMenu value="#{messageGateway.messageIdto}" panelStyle="width:150px" var="u" style="width:160px"  filter="true" filterMatchMode="startsWith">
+                        <f:selectItem itemLabel="Select One" itemValue="" />
+                        <f:selectItems value="#{userGateway.users}" var="userDetails" itemLabel="#{userDetails.forename} #{userDetails.surname}" itemValue="#{userDetails.userName}"/>
+                        <p:column>
+                            #{userDetails.forename} - #{userDetails.surname}
+                        </p:column>
+
+                    </p:selectOneMenu>                    
+                </p:column>
+                <p:column>                        
+                    <h:outputLabel value="Message : "  styleClass="descleft"/>
+                </p:column>
+                <p:column>
+                    <p:inputTextarea rows="3" cols="33" id="messageText" value="#{messageGateway.messageMessage}" label="Message Text">
+                        <p:ajax event="blur" update="messageText" />
+                    </p:inputTextarea> 
+                </p:column>
+
+            </h:panelGrid>
+            <P></P>
+            <div>
+                <h:commandButton value="Send Message" immediate="true" action="#{messageGateway.save}" label="Send" styleClass="right"/>
+            </div>    
+        </p:fieldset>
+    </p:fieldset>        
+</ui:composition>

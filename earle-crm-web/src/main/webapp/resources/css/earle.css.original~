@@ -1,0 +1,821 @@
+<<<<<<< HEAD
+/* 
+    Document   : stylesheet
+    Created on : 24-Jul-2012, 12:01:09
+    Author     : ian tolson
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.ui-widget, .ui-widget .ui-widget {
+    font-size: 92%;
+} 
+
+.ui-icon.loginBtn {
+    background-image: url('resources\images\lock.ico') !important;
+    background-position: 0 0 !important;
+}
+
+.ui-panelgrid td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    padding:2px 10px;
+}
+
+.field12 {
+    font-size:12px; 
+}
+
+.className td{
+    vertical-align: top;
+}
+
+.sub12 {
+    font-size:12px
+}
+.panel12 {
+    font-style:normal; 
+    font-size:12px; 
+    text-align:center;
+}
+
+.tab16 {
+    font-size:16px; 
+    text-align:center;
+    width:100%;
+}
+
+.tab10 {
+    font-size:12px;
+    text-align:left;
+}
+
+.tabhead {
+    font-size:12px; 
+    text-align:center;
+    background-color:#ccccff;
+    font-weight:bold;
+    width:100%;
+    color: #009933;
+}
+
+.tabheadw {
+    font-size:12px; 
+    text-align:center;
+    font-weight:bold;
+    font-family: sans-serif;
+}
+
+.tabheadsmall {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal;
+    width:97%;
+}
+
+.tabheader {
+    font-size:12px;
+    text-align:left;
+    font-weight: bold;
+}
+
+.tabheader1 {
+    font-size:12px;
+    font-weight: bold;
+    border:none;
+}
+
+.tabheadlogin {
+    font-size:12px; 
+    text-align:left;
+    width:320px;
+    top: 300px;
+    right: 300px;
+}
+
+.tabheader11 {
+    font-size:11px; 
+    text-align:left;
+    font-weight: bold;
+}
+
+.tab10l {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal; 
+}
+
+.tabcol10l {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal; 
+    width:15px; 
+}
+
+.col10r {
+    font-size:10px; 
+    text-align:right;
+    font-weight:normal; 
+    width:30px;    
+}
+
+.col10l {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal; 
+    width:200px; 
+}
+
+.col10c {
+    font-size:10px;
+    text-align:center;
+    font-weight:normal; 
+}
+
+.coldte {
+    font-size:10px;
+    text-align:left;
+    font-weight:normal;    
+    width:120px;
+}
+
+.col10desc {
+    font-size:10px;
+    text-align:left;
+    font-weight:normal;    
+    color:#3333ff;    
+    width:1000px;    
+}
+.col11r {
+    font-style:normal; 
+    font-size:11px; 
+    text-align:right;
+    font-weight:normal;
+    width:1%;    
+}
+
+.col11l {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+    width:1%;
+}
+
+.col11detailsl {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+    width:20%;
+}
+
+.col11detailss {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+    width:12%;
+}
+
+.col11c {
+    font-size:11px;
+    text-align:center;
+    font-weight:normal;
+    width:1%;
+}
+
+.coldte11 {
+    font-size:11px;
+    text-align:left;
+    font-weight:normal;
+    width:1%;
+}
+
+.coldte11c {
+    font-size:11px;
+    text-align:center;
+    font-weight:normal;
+    width:1%;
+}
+
+.dropdown20l {
+    font-size:12px;
+    text-align:left;
+    width:30px
+}
+
+.mencenter {
+    font-size:11px;
+    width:100%;
+}
+
+.menleft {
+    font-size:12px;
+    text-align:left;
+}
+
+.fieldcenter {
+    font-size:11px;
+    text-align:center;
+    background-position:center;
+}
+
+.fieldleft {
+    font-size:11px;
+    text-align:left;
+    background-position:center;
+}
+
+
+.butcenter {
+    font-size:11px;
+    text-align:center;
+    background-position:center;
+    width:100%;
+}
+
+.tinybutton {
+    font-size:11px;
+    text-align:left;
+    width:25px;
+}
+
+.topAligned {
+    vertical-align: top;
+}
+
+.dropdown-width200 {
+    text-align:left; 
+    font-size:10px;
+    width:200px;
+}
+
+.dropdown-width300 {
+    text-align:left;
+    font-size:10px;
+    width:300px;
+}
+.pan10 {
+    alignment-baseline:central;
+}
+
+.top {
+    vertical-align:middle;
+}
+
+.longbutton {
+    background-position:center;
+    font-size:12px;    
+    width: 250px;
+}
+
+.shortbutton {
+    background-position:center;
+    font-size:13px;    
+    width:60px;
+}
+
+.loginleft {
+    font-style:normal;
+    font-size:16px;
+    text-align:left
+}
+
+.loginright {
+    font-style:normal;
+    font-size:14px;
+    text-align:right;
+    direction: ltr;
+}
+
+.logincenter {
+    font-style:normal;
+    font-size:12px;
+    text-align:center;
+}
+
+.longinput {
+    font-size:16px; 
+    text-align:left;
+    text-align:left;
+    width:120px;
+    direction: ltr;
+}
+
+.loginerr {
+    font-size:13px; 
+    text-align:center;
+    font-weight: bold;
+    width:300px;
+    color: #ff3333;
+}
+
+.panhead {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+}
+
+.disphigh {
+    font-size:12px; 
+    text-align:left;
+    width:15%;
+    font-style: italic;
+    background-color: #ccccff;
+    color: black;
+}
+
+.disphighbold {
+    font-size:13px; 
+    text-align:center;
+    font-weight:bold;
+    width:100%;
+}
+
+.dispnorm {
+    font-size:11px; 
+    text-align:left;
+    font-style:normal;
+    font-weight:lighter;
+    font-variant:normal;
+}
+
+.dispnormc {
+    font-size:11px; 
+    text-align:center;
+    font-style:normal;
+    font-variant:normal;
+}
+
+.dispnormr {
+    font-size:11px; 
+    text-align:right;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+}
+
+.dispnorml {
+    font-size:11px; 
+    text-align:left;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+}
+
+.width100 {
+    width:100%;
+    font-size:11px;
+    text-align:left;
+}
+
+.inpleft {
+    font-size:12px;
+    text-align:left;
+}
+
+.dtepick {
+    font-size:11px;
+    text-align:left;
+    width:30px;
+}
+
+.descleft {
+    font-size:12px; 
+    text-align:left;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+}
+
+.descright {
+    font-size:11px; 
+    text-align:right;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+ }
+
+.centered {
+    margin: 0px auto !important;
+}
+
+.menubar {
+    font-size:11px;
+}
+
+.right {
+    font-size:11px; 
+    text-align:right;
+    font-style:normal;
+}
+=======
+/* 
+    Document   : stylesheet
+    Created on : 24-Jul-2012, 12:01:09
+    Author     : ian tolson
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.ui-widget, .ui-widget .ui-widget {
+    font-size: 92%;
+} 
+
+.ui-icon.loginBtn {
+    background-image: url('resources\images\lock.ico') !important;
+    background-position: 0 0 !important;
+}
+
+.ui-panelgrid td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    padding:2px 10px;
+}
+
+.field12 {
+    font-size:12px; 
+}
+
+.className td{
+    vertical-align: top;
+}
+
+.sub12 {
+    font-size:12px
+}
+.panel12 {
+    font-style:normal; 
+    font-size:12px; 
+    text-align:center;
+}
+
+.tab16 {
+    font-size:16px; 
+    text-align:center;
+    width:100%;
+}
+
+.tab10 {
+    font-size:12px;
+    text-align:left;
+}
+
+.tabhead {
+    font-size:12px; 
+    text-align:center;
+    background-color:#ccccff;
+    font-weight:bold;
+    width:100%;
+    color: #009933;
+}
+
+.tabheadw {
+    font-size:12px; 
+    text-align:center;
+    font-weight:bold;
+    font-family: sans-serif;
+}
+
+.tabheadsmall {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal;
+    width:97%;
+}
+
+.tabheader {
+    font-size:12px;
+    text-align:left;
+    font-weight: bold;
+}
+
+.tabheader1 {
+    font-size:12px;
+    font-weight: bold;
+    border:none;
+}
+
+.tabheadlogin {
+    font-size:12px; 
+    text-align:left;
+    width:320px;
+    top: 300px;
+    right: 300px;
+}
+
+.tabheader11 {
+    font-size:11px; 
+    text-align:left;
+    font-weight: bold;
+}
+
+.tab10l {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal; 
+}
+
+.tabcol10l {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal; 
+    width:15px; 
+}
+
+.col10r {
+    font-size:10px; 
+    text-align:right;
+    font-weight:normal; 
+    width:30px;    
+}
+
+.col10l {
+    font-size:10px; 
+    text-align:left;
+    font-weight:normal; 
+    width:200px; 
+}
+
+.col10c {
+    font-size:10px;
+    text-align:center;
+    font-weight:normal; 
+}
+
+.coldte {
+    font-size:10px;
+    text-align:left;
+    font-weight:normal;    
+    width:120px;
+}
+
+.col10desc {
+    font-size:10px;
+    text-align:left;
+    font-weight:normal;    
+    color:#3333ff;    
+    width:1000px;    
+}
+.col11r {
+    font-style:normal; 
+    font-size:11px; 
+    text-align:right;
+    font-weight:normal;
+    width:1%;    
+}
+
+.col11l {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+    width:1%;
+}
+
+.col11detailsl {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+    width:20%;
+}
+
+.col11detailss {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+    width:12%;
+}
+
+.col11c {
+    font-size:11px;
+    text-align:center;
+    font-weight:normal;
+    width:1%;
+}
+
+.coldte11 {
+    font-size:11px;
+    text-align:left;
+    font-weight:normal;
+    width:1%;
+}
+
+.coldte11c {
+    font-size:11px;
+    text-align:center;
+    font-weight:normal;
+    width:1%;
+}
+
+.dropdown20l {
+    font-size:12px;
+    text-align:left;
+    width:30px
+}
+
+.mencenter {
+    font-size:11px;
+    width:100%;
+}
+
+.menleft {
+    font-size:12px;
+    text-align:left;
+}
+
+.fieldcenter {
+    font-size:11px;
+    text-align:center;
+    background-position:center;
+}
+
+.fieldleft {
+    font-size:11px;
+    text-align:left;
+    background-position:center;
+}
+
+
+.butcenter {
+    font-size:11px;
+    text-align:center;
+    background-position:center;
+    width:100%;
+}
+
+.tinybutton {
+    font-size:11px;
+    text-align:left;
+    width:25px;
+}
+
+.topAligned {
+    vertical-align: top;
+}
+
+.dropdown-width200 {
+    text-align:left; 
+    font-size:10px;
+    width:200px;
+}
+
+.dropdown-width300 {
+    text-align:left;
+    font-size:10px;
+    width:300px;
+}
+.pan10 {
+    alignment-baseline:central;
+}
+
+.top {
+    vertical-align:middle;
+}
+
+.longbutton {
+    background-position:center;
+    font-size:12px;    
+    width: 250px;
+}
+
+.shortbutton {
+    background-position:center;
+    font-size:13px;    
+    width:60px;
+}
+
+.loginleft {
+    font-style:normal;
+    font-size:16px;
+    text-align:left
+}
+
+.loginright {
+    font-style:normal;
+    font-size:14px;
+    text-align:right;
+    direction: ltr;
+}
+
+.logincenter {
+    font-style:normal;
+    font-size:12px;
+    text-align:center;
+}
+
+.longinput {
+    font-size:16px; 
+    text-align:left;
+    text-align:left;
+    width:120px;
+    direction: ltr;
+}
+
+.loginerr {
+    font-size:13px; 
+    text-align:center;
+    font-weight: bold;
+    width:300px;
+    color: #ff3333;
+}
+
+.panhead {
+    font-size:11px; 
+    text-align:left;
+    font-weight:normal;
+}
+
+.disphigh {
+    font-size:12px; 
+    text-align:left;
+    width:15%;
+    font-style: italic;
+    background-color: #ccccff;
+    color: black;
+}
+
+.disphighbold {
+    font-size:13px; 
+    text-align:center;
+    font-weight:bold;
+    width:100%;
+}
+
+.dispnorm {
+    font-size:11px; 
+    text-align:left;
+    font-style:normal;
+    font-weight:lighter;
+    font-variant:normal;
+}
+
+.dispnormc {
+    font-size:11px; 
+    text-align:center;
+    font-style:normal;
+    font-variant:normal;
+}
+
+.dispnormr {
+    font-size:11px; 
+    text-align:right;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+}
+
+.dispnorml {
+    font-size:11px; 
+    text-align:left;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+}
+
+.width100 {
+    width:100%;
+    font-size:11px;
+    text-align:left;
+}
+
+.inpleft {
+    font-size:12px;
+    text-align:left;
+}
+
+.dtepick {
+    font-size:11px;
+    text-align:left;
+    width:30px;
+}
+
+.descleft {
+    font-size:12px; 
+    text-align:left;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+}
+
+.descright {
+    font-size:11px; 
+    text-align:right;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+ }
+
+.centered {
+    margin: 0px auto !important;
+}
+
+.menubar {
+    font-size:11px;
+}
+
+.right {
+    font-size:11px; 
+    text-align:right;
+    font-style:normal;
+}
+>>>>>>> c472f8a713f1f1e2f047e053354edfb0042912d1

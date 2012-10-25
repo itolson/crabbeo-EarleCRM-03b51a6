@@ -1,0 +1,27 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog widgetVar="professionDetails" header="Profession Details" modal="false" maximizable="false" minHeight="500" minWidth="500" styleClass="tab14">
+        <p:focus context="displayProfession"/>  
+        <h:panelGrid id="displayProfession" columns="2" styleClass="width100" cellspacing="2" cellpadding="2">
+            <h:outputText value="Profession Description: " />
+            <h:inputText value="#{professionGateway.selectedProfession.description}" />
+        </h:panelGrid>
+
+        <h:panelGroup>
+            <p:commandButton value="Save" action="#{professionGateway.save}" label="professionsave" onclick="professionDetails.hide()"  ajax="false">
+            </p:commandButton>                    
+            <p:commandButton value="Delete" action="#{professionGateway.delete}" label="professionsave" onclick="professionDetails.hide()"  ajax="false">
+            </p:commandButton>                     
+            <h:commandButton value="Close" style=" float:right;  z-index: 1000;">
+                <f:ajax onevent="professionDetails.hide()"></f:ajax>
+            </h:commandButton> 
+        </h:panelGroup>
+
+    </p:dialog>
+
+</ui:composition>

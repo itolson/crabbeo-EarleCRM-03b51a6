@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+/* 
+    Document   : common
+    Created on : Jul 29, 2012, 9:05:55 AM
+    Author     : jamescrabbe
+*/
+
+root { 
+    display: block; 
+}
+
+=======
+/* 
+    Document   : common
+    Created on : Jul 29, 2012, 9:05:55 AM
+    Author     : jamescrabbe
+*/
+
+root { 
+    display: block; 
+}
+
+>>>>>>> c472f8a713f1f1e2f047e053354edfb0042912d1

@@ -1,0 +1,59 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:fieldset toggleable="false" legend="Panel Aministration" styleClass="tabheader" style="font-size:12px;border:0px;background:0px"> 
+        <p:fieldset legend="Add" toggleable="true" toggleSpeed="100" collapsed="true" style="font-size:12px;background:0px"> 
+        <p:panel styleClass="width100">
+                <p:focus context="addPanel"/>     
+                <h:panelGrid id="addPanel" columns="6" styleClass="width100" cellspacing="2" cellpadding="2">
+                    <p:column>                        
+                        <h:outputText value="Panel Name:"  styleClass="descleft"/>
+                        <p:inputText value="#{panelGateway.panelName}" requiredMessage="A Name Is Required" style="width:180px">
+                        </p:inputText>
+                    </p:column>
+                    <p:column>                            
+                        <h:outputText value="Contact: "  styleClass="descleft"/>
+                        <p:inputText  requiredMessage="A Contact Is Required" required="false" label="Contacts" style="width:180px">
+                        </p:inputText>
+                    </p:column>
+                    <p:column>                            
+                        <h:outputText value="Telephone:"  styleClass="descleft"/>
+                        <p:inputMask mask="(99999)-999999" requiredMessage="A Telephone Numbder Is Required" required="false" label="Telephone Extension">
+                        </p:inputMask> 
+                    </p:column>
+                    <p:column>                        
+                        <h:outputText value="Position: "  styleClass="descleft"/>
+                        <p:inputText requiredMessage="Contacts Position Is Required" required="false" label="Position" style="width:180px">
+                        </p:inputText>
+                    </p:column>
+                </h:panelGrid>
+                <p></p>
+                <h:panelGrid columns="4" styleClass="width100" cellspacing="2" cellpadding="2">
+                    <h:outputText value="Address 1:"  styleClass="descleft"/>
+                    <p:inputText value="#{panelGateway.panelAddress1}" requiredMessage="An Address Is Required" style="width:180px">
+                    </p:inputText>                                    
+                    <h:outputText value="Address 2:"  styleClass="descleft"/>
+                    <p:inputText value="#{panelGateway.panelAddress2}" requiredMessage="An Address Is Required" style="width:180px">
+                    </p:inputText>                                    
+                    <h:outputText value="Address 3:"  styleClass="descleft"/>
+                    <p:inputText value="#{panelGateway.panelAddress3}" requiredMessage="An Address Is Required" style="width:180px">
+                    </p:inputText>                                    
+                    <h:outputText value="Address 4:"  styleClass="descleft"/>
+                    <p:inputText value="#{panelGateway.panelAddress4}" requiredMessage="An Address Is Required" style="width:180px">
+                    </p:inputText>                                    
+                    <h:outputText value="Postcode :"  styleClass="descleft"/>
+                    <p:inputText value="#{panelGateway.panelPostcode}" requiredMessage="An Address Is Required">
+                    </p:inputText> 
+                </h:panelGrid>
+            </p:panel>
+            <P></P>
+            <div>
+                <p:commandButton value="Save Details" action="#{panelGateway.add}" ajax="false"/> 
+            </div>
+        </p:fieldset>
+    </p:fieldset>        
+</ui:composition>

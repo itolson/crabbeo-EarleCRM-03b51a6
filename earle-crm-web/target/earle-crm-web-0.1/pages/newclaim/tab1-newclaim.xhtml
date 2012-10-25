@@ -1,0 +1,139 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <p:tab id="tab1" title="Setup Claim Page 1" titletip="Enter Claim Details Screen 1">
+        <p:focus context="claimdetails"/>
+        <h:panelGrid id="claimdetails" columns="6" styleClass="width100" cellspacing="2" cellpadding="2">
+            <p:column>
+                <h:outputText value="Beale Ref: " styleClass="descleft" />
+            </p:column>
+            <p:column>
+                <p:inputMask value="#{claimsDetailsGateway.claimRef}" mask="a999*999" styleClass="inpleft"/>
+            </p:column>
+            <p:column>
+                <h:outputText value="Fee Earner: " styleClass="descleft"/>
+            </p:column>                        
+            <p:column>
+                <p:selectOneMenu value="#{claimsDetailsGateway.feeEarner}" styleClass="descleft" effect="fade" style="width:130px">
+                    <f:selectItem itemLabel="Select One" itemValue="" />
+                    <f:selectItems value="#{userGateway.users}" var="userDetails" itemLabel="#{userDetails.forename} #{userDetails.surname}" itemValue="#{userDetails.id}"/>
+                </p:selectOneMenu>  
+            </p:column>
+            <p:column>                        
+                <h:outputText value="Partner: " styleClass="descleft" />
+            </p:column>
+            <p:column>                        
+                <p:selectOneMenu value="#{claimsDetailsGateway.partner}" styleClass="descleft" effect="fade" style="width:130px">
+                    <f:selectItem itemLabel="Select One" itemValue="" />
+                    <f:selectItems value="#{userGateway.users}" var="userDetails" itemLabel="#{userDetails.forename} #{userDetails.surname}" itemValue="#{userDetails.id}"/>
+                </p:selectOneMenu>  
+            </p:column>
+            <p:column>                        
+                <h:outputText value="Aviva Ref: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>
+                <p:inputMask value="#{claimsDetailsGateway.insuredRef}" mask="a*999999" styleClass="inpleft"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Insured: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputText id="Insured" required="true" value="#{claimsDetailsGateway.insured}"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Policy Number: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputMask value="#{claimsDetailsGateway.policyNumber}" mask="a*999999" styleClass="inpleft"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Year of Account: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputMask value="#{claimsDetailsGateway.yearOfAccount}" mask="9999" styleClass="inpleft"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Lead/Follow: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputMask value="#{claimsDetailsGateway.leadFollow}" mask="9999" styleClass="inpleft"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Avia Line: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputMask value="#{claimsDetailsGateway.insuredRef}" mask="9999" styleClass="inpleft"/>
+            </p:column>
+            <p:column>
+                <h:outputText value="Claimant: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputText id="Claimant" value="#{claimsDetailsGateway.claimant}"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Claimant Solicitors: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>
+                <p:inputText id="ClaimantSolicitors" value="#{claimsDetailsGateway.claimantSolicitors}"/>
+            </p:column>
+            <p:column>
+                <h:outputText value="Broker: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputText id="Broker" value="#{claimsDetailsGateway.broker}"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Brokers Ref: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:inputMask value="#{claimsDetailsGateway.brokerRef}" mask="9999" styleClass="inpleft"/>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Cause Code: "  styleClass="descleft"/>
+            </p:column>
+            <p:selectOneMenu value="#{claimsDetailsGateway.causeCode}" styleClass="descleft" effect="fade" style="width:180px">
+                <f:selectItem itemLabel="Select One" itemValue="" />
+                <f:selectItems value="#{causecodeGateway.causecodes}" var="causecode" itemLabel="#{causecode.description}" itemValue="#{causecode.id}"/>
+            </p:selectOneMenu>  
+            <p:column>                            
+                <h:outputText value="Sub Cause: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:selectOneMenu value="#{userGateway.forename}" styleClass="descleft" effect="fade" style="width:180px">
+                    <f:selectItem itemLabel="Select One" itemValue="" />
+                    <f:selectItems value="#{subcauseGateway.subcauses}" var="subcause" itemLabel="#{subcause.description}" itemValue="#{subcause.id}"/>
+                </p:selectOneMenu>
+            </p:column>
+            <p:column>                            
+                <h:outputText value="Date Received: "  styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:calendar value="#{calendarBean.date1}"  navigator="true" id="DateReceived" showButtonPanel="true" pattern="dd/MM/yyyy" styleClass="dtepick"/>
+            </p:column>
+
+            <p:column>                        
+                <h:outputText value="Profession: " styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:selectOneMenu value="#{userGateway.surname}" styleClass="descleft" effect="fade" style="width:180px">
+                    <f:selectItem itemLabel="Select One" itemValue="" />
+                    <f:selectItems value="#{professionGateway.professions}" var="profession" itemLabel="#{profession.description}" itemValue="#{profession.id}"/>
+                </p:selectOneMenu>
+            </p:column>
+            <p:column>
+                <h:outputText value="Area of Practice: " styleClass="descleft"/>
+            </p:column>
+            <p:column>                            
+                <p:selectOneMenu value="#{messageGateway.messageIdfrom}" styleClass="descleft" effect="fade" style="width:180px" filter="true">
+                    <f:selectItem itemLabel="Select One" itemValue="" />
+                    <f:selectItems value="#{practiceGateway.practices}" var="practice" itemLabel="#{practice.description}" itemValue="#{practice.id}"/>
+                </p:selectOneMenu>
+            </p:column>
+        </h:panelGrid>
+        <h:commandButton value="Save" action="#{newClaim.bealRef}"/> 
+    </p:tab>
+</ui:composition>

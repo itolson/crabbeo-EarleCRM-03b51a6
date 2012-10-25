@@ -1,0 +1,258 @@
+<ui:composition template="/templates/basic-template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"  
+                xmlns:h="http://java.sun.com/jsf/html"  
+                xmlns:f="http://java.sun.com/jsf/core"  
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets">  
+    <ui:define name="content">
+        <h:form>
+            <p:fieldset legend="Claims Track - Display Claim Information" styleClass="tabheader1">
+                <p></p>
+                <h:panelGrid columns="4" styleClass="butcenter">
+                     <p:commandButton value="Print Claim Information" onclick="" type="button" styleClass="longbutton"/>
+                    <p:commandButton value="Amend Claim Information" onclick="" type="button" styleClass="longbutton"/>
+                    <p:commandButton value="Delete Claim Information" onclick="" type="button" styleClass="longbutton"/>
+                </h:panelGrid>
+                <p:tabView id="tabView" styleClass="tabheader">
+                    <p:tab id="tab1" title="Claim Detail Page 1">
+                        <p:panelGrid styleClass="width100">
+                            <p:row>
+                                <p:column styleClass="disphigh">Insured Name</p:column>
+                                <p:column styleClass="dispnorm" colspan="5" >Acme Insured Ltd</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Address</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">1 Anywhere</p:column>
+                                <p:column styleClass="disphigh">Town / City</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Bristol</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">County</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">South Gloucestershire</p:column>
+                                <p:column styleClass="disphigh">Post Code</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">BS34 7ON</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Profession</p:column>
+                                <p:column styleClass="dispnorm" colspan="5">S01 Solicitor</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphighbold" colspan="6">Policy Information</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Policy Number</p:column>
+                                <p:column styleClass="dispnorm" colspan="5">71123-432424</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Year of Account</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">2008</p:column>
+                                <p:column styleClass="disphigh">Policy Period</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">24/03/2008 - 23/03/2009</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Broker</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Acme Brokers Ltd</p:column>
+                                <p:column styleClass="disphigh">Broker Reference</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">AD-7762348</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphighbold" colspan="6">Claim Information</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Beale Reference</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">AF/12322</p:column>
+                                <p:column styleClass="disphigh">Aviva Reference</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">AD-7762348-1</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Claims Supervisor</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Joe Bloggs Senior</p:column>
+                                <p:column styleClass="disphigh">Claims Handler</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Joe Bloggs Junior</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Claimant</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Mr V Annoyed</p:column>
+                                <p:column styleClass="disphigh">Claimant Solicitor</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Acme Solicitors Ltd</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Claims or Circumstance</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Dropped a TV</p:column>
+                                <p:column styleClass="disphigh">Date Received from Aviva</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">31/07/2011</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Trial Date</p:column>
+                                <p:column styleClass="dispnorm" colspan="2"></p:column>
+                                <p:column styleClass="disphigh">Attachment Point</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Prof Neg Limit</p:column>
+                            </p:row>      
+                            <p:row>
+                                <p:column styleClass="disphigh">Litigation Confirmation</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">No</p:column>
+                                <p:column styleClass="disphigh">Cause of Loss</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Valutation</p:column>
+                            </p:row>   
+                            <p:row>
+                                <p:column styleClass="disphigh">Status</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Open</p:column>
+                                <p:column styleClass="disphigh">Sub Cause of Loss</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Over Valuation</p:column>
+                            </p:row>     
+                            <p:row>
+                                <p:column styleClass="disphigh">Area of Practice</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Residential</p:column>
+                                <p:column styleClass="disphigh">Class Action</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">No</p:column>
+                            </p:row>
+                            <p:row>                        
+                                <p:column styleClass="disphigh">Reported By</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Mr A Body</p:column>
+                                <p:column styleClass="disphigh"></p:column>
+                                <p:column styleClass="dispnorm" colspan="2"></p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Initial Case Estimate</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">15,000,000</p:column>
+                                <p:column styleClass="disphigh">Fixed</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">No</p:column>
+                            </p:row> 
+                            <p:row>
+                                <p:column styleClass="disphigh">Date Settled</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">21/12/20011</p:column>
+                                <p:column styleClass="disphigh">Pap Response Due</p:column>
+                                <p:column styleClass="dispnorm" colspan="2"></p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Pap Level of Claim Served</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">20/06/2010</p:column>
+                                <p:column styleClass="disphigh">Pap Response Served</p:column>
+                                <p:column styleClass="dispnorm" colspan="2"></p:column>
+                            </p:row>      
+                            <p:row>
+                                <p:column styleClass="disphigh">File Open Date</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">20/06/2010</p:column>
+                                <p:column styleClass="disphigh">File Close Date</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">22/03/2010</p:column>
+                            </p:row>  
+                            <p:row>
+                                <p:column styleClass="disphigh">Coverage</p:column>
+                                <p:column styleClass="dispnorm" colspan="5">20/06/2010</p:column>
+                            </p:row>
+                        </p:panelGrid>
+                    </p:tab>
+                    <p:tab id="tab2" title="Claim Detail Page 2">
+                        <p:panelGrid styleClass="width100">
+                            <p:row>
+                                <p:column styleClass="disphigh" >Details of claim</p:column>
+                                <p:column styleClass="dispnorm" colspan="5">There was a leak on a drain pipe in the bathroom and the ceiling collapsed which in turn knocked the tv onto the floor</p:column>
+                            </p:row> 
+                            <p:row>
+                                <p:column styleClass="disphigh">Recommended Steps</p:column>
+                                <p:column styleClass="dispnorm" colspan="5">There was a leak on a drain pipe in the bathroom and the ceiling collapsed which in turn knocked the tv onto the floor</p:column>
+                            </p:row> 
+                            <p:row>
+                                <p:column styleClass="disphigh">Liability of the Insured</p:column>
+                                <p:column styleClass="dispnorm" colspan="5"></p:column>
+                            </p:row>                        
+                            <p:row>
+                                <p:column styleClass="disphigh">Date of Next Review</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">20/06/2010</p:column>
+                                <p:column styleClass="disphigh">Last Report Date</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">20/07/2010</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Task Title</p:column>
+                                <p:column styleClass="dispnorm" colspan="5">Replace The TV</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Lead</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Y</p:column>
+                                <p:column styleClass="disphigh">Aviva State</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">Settled</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Limit Cost Inclusive</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">22,000</p:column>
+                                <p:column styleClass="disphigh">Aviva Percentage of Estimate</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">80%</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Excess</p:column>
+                                <p:column styleClass="dispnorm" colspan="2">5,000</p:column>
+                                <p:column styleClass="disphigh">Limit</p:column>
+                                <p:column styleClass="dispnorm" colspan="2"></p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphighbold" colspan="6">Financial Information</p:column>                        
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Maximum Possible Loss</p:column>
+                                <p:column styleClass="dispnormr" colspan="5">126,000</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Claim Estimate</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">5,000</p:column>
+                                <p:column styleClass="disphigh">Indemnity Payments</p:column>
+                                <p:column styleClass="dispnormr" colspan="2"></p:column>
+                            </p:row>                        
+                            <p:row>
+                                <p:column styleClass="disphigh">Claimants Cost Estimate</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">15,000</p:column>
+                                <p:column styleClass="disphigh">Claimants Costs Paid</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">12,000</p:column>
+                            </p:row>  
+                            <p:row>
+                                <p:column styleClass="disphigh">Defendants Cost Estimate</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">15,000</p:column>
+                                <p:column styleClass="disphigh">Defendants Costs Paid</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">12,000</p:column>
+                            </p:row>                         
+                            <p:row>
+                                <p:column styleClass="disphigh">Reserve Outstanding Total</p:column>
+                                <p:column styleClass="dispnorr" colspan="2">15,000</p:column>
+                                <p:column styleClass="disphigh">Recoveries</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">12,000</p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column styleClass="disphigh">Total Incurred</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">15,000</p:column>
+                                <p:column styleClass="disphigh">Paid Total</p:column>
+                                <p:column styleClass="dispnormr" colspan="2">12,000</p:column>
+                            </p:row>                         
+                        </p:panelGrid>
+                    </p:tab>
+                    <p:tab id="tab3" title="Claim Detail Page 3">
+                        <p:panelGrid styleClass="width100">
+                            <p:row>
+                                <p:column styleClass="disphighbold" colspan="6">Chronology of Recommended Steps</p:column>
+                            </p:row>
+                        </p:panelGrid>
+                        <p:dataTable id="chronoSteps" var="chronoSteps" value="chronoSteps">
+                            <p:columnGroup type="header">
+                                <p:row>
+                                    <p:column headerText="Date" colspan="1" styleClass="col11l"/>
+                                    <p:column headerText="Username" colspan="1" styleClass="col11l"/>
+                                    <p:column headerText="Comment" colspan="4" styleClass="col11l"/>
+                                </p:row>
+                            </p:columnGroup>
+
+                            <p:column styleClass="coldte" colspan="1">
+                                18/07/2012
+                            </p:column>
+                            <p:column  styleClass="col10l" colspan="1">
+                                JBloggs
+                            </p:column>
+                            <p:column styleClass="col10l" colspan="4">
+                                what a load of rubbish, this new system should work better and we are trying to make it work a lot better then is does at the moment this is a test of the fields length test.
+                            </p:column>
+                        </p:dataTable>
+
+                    </p:tab>
+                </p:tabView>
+            </p:fieldset>           
+
+        </h:form>
+    </ui:define>  
+</ui:composition>
